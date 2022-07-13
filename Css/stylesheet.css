@@ -38,6 +38,7 @@
 
 * {
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 h1, h2, p {
@@ -56,14 +57,24 @@ h1, h2, p {
     margin-right: auto;
 }
 
+.search {
+    height: 285px;
+    background-color: #f7f7f7;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
 .search-input {
-    background-color: lightgray;
+    background-color: #ededed;
     height: 40px;
+    box-shadow: 0px 2px 2px inset lightgrey;
+    margin-bottom: 30px;
 }
 
 .search input {
     border: none;
-    background-color: lightgray;
+    background-color: #ededed;
+    
 }
 
 .fa-location-dot {
@@ -72,12 +83,14 @@ h1, h2, p {
     margin-right: 10px;
 }
 
+.annonce {
+    margin-bottom: 30px;
+}
+
 .title {
-    font-size: 1.3em;
+    font-size: 1.3em; /*rem*/
     width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    margin: 0 auto 13px auto;
 }
 
 .description {
@@ -93,4 +106,6 @@ h1, h2, p {
     border-radius: 22px;
     border: none;
     box-shadow: 1px 6px 10px lightgrey;
+    display: table; /*Est-ce correct ? */
+    margin: 0 auto;
 }
