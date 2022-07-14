@@ -109,3 +109,27 @@ h1, h2, p {
     display: table; /*Est-ce correct ? */
     margin: 0 auto;
 }
+
+.function {
+    margin-left: 15px;
+}
+
+.functioning-content {
+    padding: 0;
+    width: 80%;
+}
+
+.functioning {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.functioning .fa-solid {
+    width: 15%;
+    padding-left: 18px;
+}
+
+.functioning p {
+    width: 80%;
+}
