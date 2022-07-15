@@ -1,10 +1,11 @@
 @font-face {
     font-family: 'Shrikhand';
-    src: url('Shrikhand-Regular.eot');
+    src: url('Fonts/Shrikland/Shrikhand-Regular.eot');
     src: url('Shrikhand-Regular.eot?#iefix') format('embedded-opentype'),
-        url('Shrikhand-Regular.woff2') format('woff2'),
-        url('Shrikhand-Regular.woff') format('woff'),
-        url('Shrikhand-Regular.svg#Shrikhand-Regular') format('svg');
+        url('Fonts/Shrikland/Shrikhand-Regular.woff2') format('woff2'),
+        url('Fonts/Shrikland/Shrikhand-Regular.woff') format('woff'),
+        url('Fonts/Shrikland/Shrikhand-Regular.ttf') format('truetype'),
+        url('Fonts/Shrikland/Shrikhand-Regular.svg') format('svg');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -12,12 +13,12 @@
 
 @font-face {
     font-family: 'Roboto';
-    src: url('Roboto-Bold.eot');
+    src: url('Fonts/Roboto/Roboto-Bold.eot');
     src: url('Roboto-Bold.eot?#iefix') format('embedded-opentype'),
-        url('Roboto-Bold.woff2') format('woff2'),
-        url('Roboto-Bold.woff') format('woff'),
-        url('Roboto-Bold.ttf') format('truetype'),
-        url('Roboto-Bold.svg#Roboto-Bold') format('svg');
+        url('Fonts/Roboto/Roboto-Bold.woff2') format('woff2'),
+        url('Fonts/Roboto/Roboto-Bold.woff') format('woff'),
+        url('Fonts/Roboto/Roboto-Bold.ttf') format('truetype'),
+        url('Fonts/Roboto/Roboto-Bold.svg') format('svg');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -25,13 +26,13 @@
 
 @font-face {
     font-family: 'Roboto';
-    src: url('Roboto-Medium.eot');
-    src: url('Roboto-Medium.eot?#iefix') format('embedded-opentype'),
-        url('Roboto-Medium.woff2') format('woff2'),
-        url('Roboto-Medium.woff') format('woff'),
-        url('Roboto-Medium.ttf') format('truetype'),
-        url('Roboto-Medium.svg#Roboto-Medium') format('svg');
-    font-weight: 500;
+    src: url('Fonts/Roboto/Roboto-Regular.eot');
+    src: url('Fonts/Roboto/Roboto-Regular.eot') format('embedded-opentype'),
+        url('Fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+        url('Fonts/Roboto/Roboto-Regular.woff') format('woff'),
+        url('Fonts/Roboto/Roboto-Regular.ttf') format('truetype'),
+        url('Fonts/Roboto/Roboto-Regular.svg') format('svg');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
@@ -41,8 +42,25 @@
     font-size: 16px;
 }
 
-h1, h2, p {
-    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+h1, h2, h3, p , .button {
+    font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+h4 {
+    font-family: 'Shrikhand', serif;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 .header {
@@ -51,6 +69,8 @@ h1, h2, p {
 
 .header-img {
     width: 50%;
+    max-width: 270px;
+    min-width: 140px;
     height: auto;
     display: block;
     margin-left: auto;
@@ -59,28 +79,41 @@ h1, h2, p {
 
 .search {
     height: 285px;
-    background-color: #f7f7f7;
+    background-color: #f6f6f6;
     text-align: center;
     margin-bottom: 45px;
 }
 
 .search-input {
-    background-color: #ededed;
+    background-color: #eaeaea;
     height: 40px;
-    box-shadow: 0px 2px 2px inset lightgrey;
+    box-shadow: inset 0px 2px 3px #cfcfcf;
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .search input {
     border: none;
-    background-color: #ededed;
-    
+    font-family: 'Roboto';
+    background-color: #eaeaea;
+    width: 45%;
 }
 
 .fa-location-dot {
-    margin-left: 80px;
-    margin-top: 10px;
-    margin-right: 10px;
+    width: 30px;
+    color: #353535;
+}
+
+::placeholder {
+    color: #353535;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+input:focus {
+    outline: none;
 }
 
 .annonce {
@@ -88,13 +121,13 @@ h1, h2, p {
 }
 
 .title {
-    font-size: 1.3em; /*rem*/
+    font-size: 1.3rem;
     width: 70%;
     margin: 0 auto 13px auto;
 }
 
 .description {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -102,8 +135,11 @@ h1, h2, p {
 }
 
 .button {
-    padding: 10px;
+    padding: 1em 1.4em;
+    color: #fff;
+    font-size: 0.8rem;
     border-radius: 22px;
+    background: linear-gradient(#ff79da, #9356dc);
     border: none;
     box-shadow: 1px 6px 10px lightgrey;
     display: table; /*Est-ce correct ? */
@@ -112,24 +148,129 @@ h1, h2, p {
 
 .function {
     margin-left: 15px;
+    height: 315px;
 }
 
 .functioning-content {
     padding: 0;
-    width: 80%;
+    width: 95%;
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .functioning {
+    height: 26%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    box-shadow: 3px 3px 7px #e6e6e6, -3px 3px 7px #e6e6e6;
 }
 
 .functioning .fa-solid {
     width: 15%;
     padding-left: 18px;
+    color: #7e7e7e;
 }
 
 .functioning p {
     width: 80%;
+    font-weight: bold;
+}
+
+.center {
+    padding-left: 15px;
+    padding-bottom: 40px;
+    background-color: #f6f6f6;
+}
+
+.center h2 {
+    padding-top: 36px;
+}
+
+.galerie-content {
+    width: 95%;
+    height: 880px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.galerie {
+    height: 23%;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    position: relative;
+}
+
+.galerie-img {
+    width: 100%;
+    height: 75%;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+    /*aspect-ratio: 11/6;*/
+}
+
+.annotation {
+    width: fit-content;
+    background-color: lightgreen;
+    margin: 0;
+    position: absolute;
+    right: 11px;
+    top: 11px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h3 {
+    margin: 0;
+    padding-left: 10px;
+}
+
+.galerie-text p {
+    margin: 0;
+    padding-left: 10px;
+}
+
+.fa-heart {
+    font-size: 1.5rem;
+    padding-right: 10px;
+}
+
+.footer {
+    background-color: #353535;
+    color: #fff;
+    padding: 1px 0 1px 25px;
+}
+
+.footer-flex {
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-flex li {
+    width: 70%;
+}
+
+.footer-bold {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-bold .fa-solid {
+    width: 40px;
+}
+
+.footer-flex li p {
+    margin-bottom: 0;
 }
