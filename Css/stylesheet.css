@@ -41,9 +41,7 @@
     box-sizing: border-box;
     font-size: 16px;
     outline: none;
-}
-
-h1, h2, h3, p , .button {
+    list-style: none;
     font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -65,7 +63,8 @@ a {
 }
 
 .header {
-    height: 50px;
+    padding: 10px 0;
+    height: auto;
 }
 
 .header-img {
@@ -145,7 +144,7 @@ a {
 
 .button:focus, .button:hover {
     transform: scale(1.2);
-    border: 4px solid #fff;
+    cursor: pointer;
 }
 
 .button:active {
@@ -274,12 +273,12 @@ h3 {
     padding-left: 10px;
 }
 
-.fa-heart {
+.flex .fa-heart {
     font-size: 1.5rem;
     padding-right: 10px;
 }
 
-.fa-regular {
+.flex .fa-regular {
     position: absolute;
     right: 0;
     background-color: #fff;
@@ -294,7 +293,8 @@ h3 {
 .fa-regular:hover {
     color: transparent;
     background-color: transparent;
-    transition: ease-in-out 2s
+    transition: ease-in-out 2s;
+    cursor: pointer;
     /*animation-duration: 2s;
     animation-name: heart;
     animation-fill-mode: both;*/
@@ -324,7 +324,6 @@ h3 {
 
 .footer-flex {
     margin-bottom: 0;
-    list-style: none;
     padding-left: 0;
     display: flex;
     flex-wrap: wrap;
@@ -470,3 +469,137 @@ h3 {
         margin-right: auto;
     }
 }
+
+/*------------Menu-------------*/
+.back {
+    font-size: 1.3rem;
+    color: #353535;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.img-font {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 238px;
+    object-fit: cover;
+}
+
+.center-m {
+    width: 100%;
+    padding-left: 15px;
+    padding-bottom: 40px;
+    background-color: #f6f6f6;
+    border-radius: 31px 31px 0 0;
+    margin-top: 201px;
+    /*position: absolute;
+    top: 235px;*/
+}
+.flex-m {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 92%;
+    position: relative;
+}
+
+.title-m {
+    font-family: 'Shrikhand', serif;
+    font-weight: normal;
+    font-size: 1.35rem;
+    margin-left: 5px;
+}
+
+.flex-m .fa-regular {
+    position: absolute;
+    right: 0;
+    background-color: #f6f6f6;
+}
+
+.flex-m .fa-solid {
+    background: linear-gradient(#9356dc, #ff79da );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; 
+}
+
+.fa-regular:hover {
+    background-color: transparent;
+}
+
+.flex-m .like {
+    font-size: 1.5rem;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.container {
+    height: 1120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container h2 {
+    font-weight: 400;
+    border-bottom: 3px solid #99E2D0; /*Comment faire la ligne ? */
+    width: 35px;
+    overflow: visible;
+}
+
+.starter>ul, .main-course>ul, .dessert>ul, .starter-2>ul {
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.starter-2>ul {
+    height: 84.7%;
+}
+
+.starter, .main-course, .dessert {
+    height: 32%;
+}
+
+.main-course-2, .dessert-2 {
+    height: 29%;
+}
+
+.starter-2 {
+    height: 39%;
+}
+
+.starter-2 .contain {
+    height: 21.565%;
+}
+
+.contain {
+    background-color: #fff;
+    border-radius: 12px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0 20px 10px;
+    height: 28%;
+    box-shadow: 3px 3px 7px #e6e6e6, -3px 3px 7px #e6e6e6;
+}
+
+.contain h3 {
+    width: 100%;
+    padding-left: 0;
+}
+
+.flex-price {
+    width: 93%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    font-weight: bold;
+}
+
