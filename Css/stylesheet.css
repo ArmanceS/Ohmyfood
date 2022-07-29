@@ -77,10 +77,6 @@ a {
     margin-right: auto;
 }
 
-.img-font-l {
-    display: none;
-}
-
 .search {
     height: 285px;
     background-color: #f6f6f6;
@@ -242,6 +238,7 @@ ol {
     height: 23%;
     width: 100%;
     background-color: #fff;
+    box-shadow: 3px 3px 7px #e6e6e6, -3px 3px 7px #e6e6e6;
     border-radius: 20px;
     position: relative;
 }
@@ -259,7 +256,7 @@ ol {
     font-weight: bold;
     padding: 5px 10px;
     border-radius: 2px;
-    background-color: #99E2D0;
+    background-color: #99e2d0;
     color: #008766;
     margin: 0;
     position: absolute;
@@ -352,7 +349,7 @@ h3 {
     z-index: 1;
     text-align: center;
     background-color: #eaeaea;
-    animation: spin-base 4s step-end 1 forwards;
+    animation: spin-base 3s step-end 1 forwards;
 }
 
 .spin {
@@ -380,7 +377,7 @@ h3 {
     left: 15px;
     bottom: 15px;
     right: 15px;
-    animation: spin 4s linear infinite reverse;
+    animation: spin 3s linear infinite reverse;
 }
 
 @keyframes spin {
@@ -409,6 +406,10 @@ h3 {
 }
 
 /*------------Menu-------------*/
+.body {
+    position: relative;
+}
+
 .back {
     font-size: 1.3rem;
     color: #353535;
@@ -431,9 +432,8 @@ h3 {
     background-color: #f6f6f6;
     border-radius: 31px 31px 0 0;
     margin-top: 201px;
-    /*position: absolute;
-    top: 235px;*/
 }
+
 .flex-m {
     display: flex;
     align-items: center;
@@ -677,7 +677,7 @@ ul {
 
 /* MEDIA QUERRIES*/
 
-@media screen and (min-width: 240px) {
+@media screen and (max-width: 359px) {
 
     .contain:hover .flex-price {
         width: 65%;
@@ -788,20 +788,6 @@ ul {
 }
 
 @media screen and (min-width: 769px) {
-
-    .img-font {
-        display: none;
-    }
-    
-    .img-font-l {
-        width: 100%;
-        height: 238px;
-        max-width: 1114px;
-        display: inline-block;
-        position: absolute;
-        z-index: -1;
-        object-fit: cover;
-    }
 
     .contain {
         max-width: none;
